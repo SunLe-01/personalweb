@@ -520,9 +520,8 @@ button {
 .home-logo-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.78rem;
   min-width: max-content;
-  padding: 0.42rem 0.2rem;
+  padding: 0.28rem 0.08rem;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -546,15 +545,6 @@ button {
 .home-logo-badge__mark svg {
   width: 1rem;
   height: 1rem;
-}
-
-.home-logo-badge__label {
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: rgba(243, 240, 234, 0.88);
 }
 
 @keyframes home-name-gradient-flow {
@@ -2254,8 +2244,7 @@ button {
   }
 
   .home-logo-badge {
-    gap: 0.55rem;
-    padding: 0.35rem 0.08rem;
+    padding: 0.24rem 0.04rem;
   }
 
   .home-logo-badge__mark {
@@ -2266,11 +2255,6 @@ button {
   .home-logo-badge__mark svg {
     width: 0.82rem;
     height: 0.82rem;
-  }
-
-  .home-logo-badge__label {
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
   }
 
   .about-shell {
