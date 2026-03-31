@@ -91,7 +91,7 @@ export const menuItems: Array<{ id: SectionId; label: string }> = [
 ];
 
 export const siteIdentity: SiteIdentity = {
-  role: "CREATIVE TECHNOLOGIST",
+  role: "SOFTWARE ENGINEERING",
   name: ["SUNLE", ""],
   eyebrow: "PORTFOLIO / MOTION / INTERACTION",
   summary:
