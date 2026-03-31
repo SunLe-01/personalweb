@@ -1,0 +1,21 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#090707"/>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect x="122" y="132" width="1356" height="936" rx="34" fill="rgba(12,10,10,0.58)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="208" y="208" width="1184" height="84" rx="18" fill="rgba(255,255,255,0.05)"/>
+  <rect x="208" y="340" width="1184" height="84" rx="18" fill="rgba(255,255,255,0.03)"/>
+  <rect x="208" y="472" width="1184" height="84" rx="18" fill="rgba(255,255,255,0.05)"/>
+  <rect x="208" y="680" width="1184" height="274" rx="30" fill="rgba(12,8,8,0.9)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="252" y="260" fill="#F5EFEA" font-family="Arial, sans-serif" font-size="24" letter-spacing="8">01 / 02 / 03 / 04</text>
+  <text x="252" y="618" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="132" font-weight="900">CINDER</text>
+  <text x="252" y="760" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="110" font-weight="900">SYSTEM</text>
+  <text x="252" y="834" fill="#E8DBD6" font-family="Arial, sans-serif" font-size="34">Index bars, numbered frames, and a stable information block</text>
+  <text x="252" y="882" fill="#E8DBD6" font-family="Arial, sans-serif" font-size="34">make the narrative page feel more structured and navigable.</text>
+  <defs>
+    <linearGradient id="bg" x1="106" y1="72" x2="1490" y2="1088" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#181010"/>
+      <stop offset="0.54" stop-color="#101010"/>
+      <stop offset="1" stop-color="#54200C"/>
+    </linearGradient>
+  </defs>
+</svg>

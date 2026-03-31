@@ -1,0 +1,26 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#0B0707"/>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect x="126" y="116" width="1348" height="968" rx="34" fill="rgba(14,10,10,0.72)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="220" y="202" width="540" height="706" rx="28" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="820" y="202" width="552" height="324" rx="28" fill="rgba(255,255,255,0.06)"/>
+  <rect x="820" y="568" width="552" height="340" rx="28" fill="rgba(17,11,9,0.92)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="238" y="446" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="126" font-weight="900">AUREL</text>
+  <text x="238" y="548" fill="#E7D8D2" font-family="Arial, sans-serif" font-size="26" letter-spacing="5">EDITORIAL / COMMERCE / DETAIL</text>
+  <text x="858" y="660" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="106" font-weight="900">INDEX</text>
+  <text x="858" y="744" fill="#E7D8D2" font-family="Arial, sans-serif" font-size="34">A modular frame for product copy, image crops,</text>
+  <text x="858" y="796" fill="#E7D8D2" font-family="Arial, sans-serif" font-size="34">and denser editorial pacing without visual noise.</text>
+  <g opacity="0.72">
+    <rect x="858" y="844" width="196" height="54" rx="27" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+    <rect x="1076" y="844" width="208" height="54" rx="27" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="890" y="879" fill="#F5EFEA" font-family="Arial, sans-serif" font-size="20" letter-spacing="3">WINDOW LAYOUT</text>
+    <text x="1112" y="879" fill="#F5EFEA" font-family="Arial, sans-serif" font-size="20" letter-spacing="3">DETAIL SYSTEM</text>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="88" y1="72" x2="1508" y2="1116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#241111"/>
+      <stop offset="0.48" stop-color="#120A09"/>
+      <stop offset="1" stop-color="#5E2408"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,67 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#030104"/>
+      <stop offset="0.5" stop-color="#090108"/>
+      <stop offset="1" stop-color="#040103"/>
+    </linearGradient>
+    <linearGradient id="beam-red" x1="233.33" y1="106.667" x2="506.667" y2="793.333" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF2D55" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#0A0107" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beam-purple" x1="993.333" y1="60" x2="1253.33" y2="726.667" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4C0C80" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#0A0107" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beam-dark" x1="673.333" y1="26.6667" x2="886.667" y2="633.333" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#240417" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#090106" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow-center" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(660 476) rotate(11.5589) scale(501.481 221.066)">
+      <stop stop-color="#FFE6F1" stop-opacity="0.88"/>
+      <stop offset="0.28" stop-color="#FF90B3" stop-opacity="0.42"/>
+      <stop offset="0.6" stop-color="#641232" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#090106" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-left" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(408 510) rotate(22.1736) scale(294.489 173.195)">
+      <stop stop-color="#FF2D55" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#090106" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-right" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1050 334) rotate(157.62) scale(330.62 164.448)">
+      <stop stop-color="#5E189C" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#090106" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="1" fill="#FFFFFF" fill-opacity="0.04"/>
+    </pattern>
+    <pattern id="micro-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#FFFFFF" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="blur-90" x="-300" y="-300" width="2200" height="1500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#micro-grid)" opacity="0.28"/>
+  <rect width="1600" height="900" fill="url(#scan)" opacity="0.52"/>
+
+  <g opacity="0.95">
+    <polygon points="280,120 420,120 660,780 520,780" fill="url(#beam-red)"/>
+    <polygon points="550,60 720,60 930,840 760,840" fill="url(#beam-dark)"/>
+    <polygon points="860,40 1030,40 1260,760 1090,760" fill="url(#beam-purple)"/>
+  </g>
+
+  <g filter="url(#blur-90)">
+    <ellipse cx="660" cy="476" rx="420" ry="186" fill="url(#glow-center)"/>
+    <ellipse cx="408" cy="510" rx="240" ry="152" fill="url(#glow-left)"/>
+    <ellipse cx="1050" cy="334" rx="260" ry="144" fill="url(#glow-right)"/>
+  </g>
+
+  <g opacity="0.22">
+    <path d="M0 708H1600" stroke="#FFFFFF"/>
+    <path d="M0 640H1600" stroke="#FFFFFF" stroke-opacity="0.5"/>
+    <path d="M0 570H1600" stroke="#FFFFFF" stroke-opacity="0.34"/>
+    <path d="M0 500H1600" stroke="#FFFFFF" stroke-opacity="0.24"/>
+  </g>
+</svg>

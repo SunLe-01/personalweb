@@ -1,0 +1,16 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#040404"/>
+  <rect x="96" y="96" width="1408" height="808" rx="28" fill="url(#bg)"/>
+  <rect x="170" y="170" width="420" height="660" rx="24" fill="rgba(255,255,255,0.06)"/>
+  <rect x="646" y="170" width="782" height="660" rx="24" fill="rgba(0,0,0,0.18)"/>
+  <rect x="720" y="252" width="340" height="24" rx="12" fill="#FF2A2A"/>
+  <rect x="720" y="322" width="540" height="20" rx="10" fill="rgba(255,255,255,0.08)"/>
+  <rect x="720" y="380" width="500" height="20" rx="10" fill="rgba(255,255,255,0.08)"/>
+  <text x="170" y="780" fill="#F5F1EB" font-size="40" font-family="Arial">EDITORIAL SPLIT</text>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="96" x2="1504" y2="904" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111111"/>
+      <stop offset="1" stop-color="#5A0000"/>
+    </linearGradient>
+  </defs>
+</svg>

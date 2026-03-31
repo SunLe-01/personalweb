@@ -1,0 +1,17 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#080808"/>
+  <rect x="72" y="70" width="1456" height="860" rx="28" fill="url(#bg)"/>
+  <rect x="140" y="162" width="300" height="560" rx="16" fill="#FF2A2A"/>
+  <rect x="500" y="162" width="620" height="160" rx="14" fill="rgba(255,255,255,0.08)"/>
+  <rect x="500" y="360" width="720" height="210" rx="18" fill="rgba(255,255,255,0.06)"/>
+  <rect x="500" y="608" width="500" height="114" rx="14" fill="rgba(0,0,0,0.22)"/>
+  <text x="500" y="312" fill="#F5F1EB" font-size="84" font-family="Arial" font-weight="700">AXIS</text>
+  <text x="140" y="804" fill="#F5F1EB" font-size="34" font-family="Arial">HERO LAYOUT</text>
+  <defs>
+    <linearGradient id="bg" x1="140" y1="100" x2="1400" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1A1A"/>
+      <stop offset="0.55" stop-color="#101010"/>
+      <stop offset="1" stop-color="#4A0000"/>
+    </linearGradient>
+  </defs>
+</svg>

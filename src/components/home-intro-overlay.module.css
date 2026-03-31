@@ -1,0 +1,225 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 36;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  pointer-events: auto;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 44, 32, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(90, 0, 8, 0.3) 0%, rgba(8, 0, 2, 0.94) 28%, #020202 100%);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255, 72, 52, 0.08), transparent 22%),
+    radial-gradient(circle at 78% 16%, rgba(144, 12, 24, 0.12), transparent 24%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: auto, auto, 12vw 100%, 100% 12vw;
+}
+
+.backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.66), transparent 26%, transparent 72%, rgba(0, 0, 0, 0.78)),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.03), transparent 48%);
+}
+
+.frame {
+  position: absolute;
+  inset: clamp(18px, 2vw, 30px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 0 0 1px rgba(80, 0, 8, 0.18);
+}
+
+.frame::before,
+.frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+.frame::before {
+  left: clamp(18px, 2vw, 32px);
+}
+
+.frame::after {
+  right: clamp(18px, 2vw, 32px);
+}
+
+.pulse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(260px, 36vw, 560px);
+  height: clamp(180px, 24vw, 360px);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle at center, rgba(255, 48, 36, 0.28), rgba(72, 0, 6, 0.16) 42%, transparent 74%);
+  filter: blur(28px);
+}
+
+.glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(88vw, 72rem);
+  height: clamp(16px, 2vw, 28px);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, transparent, rgba(255, 128, 112, 0.9) 22%, rgba(255, 58, 44, 1) 50%, rgba(255, 128, 112, 0.9) 78%, transparent);
+  box-shadow:
+    0 0 26px rgba(255, 60, 42, 0.26),
+    0 0 48px rgba(255, 28, 28, 0.18);
+  filter: blur(18px);
+}
+
+.seam {
+  position: absolute;
+  left: 50%;
+  top: 7%;
+  bottom: 7%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent, rgba(255, 196, 190, 0.9) 18%, rgba(255, 42, 28, 0.96) 50%, rgba(255, 196, 190, 0.88) 82%, transparent);
+  box-shadow:
+    0 0 20px rgba(255, 58, 38, 0.4),
+    0 0 44px rgba(255, 24, 24, 0.2);
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 52%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.curtainLeft {
+  left: 0;
+}
+
+.curtainRight {
+  right: 0;
+}
+
+.curtainInner {
+  position: absolute;
+  inset: -4%;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.52) 24%, rgba(0, 0, 0, 0.68) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(78, 0, 8, 0.82) 42%, rgba(120, 6, 18, 0.78) 64%, rgba(18, 0, 4, 0.92) 100%);
+  box-shadow:
+    inset -18px 0 28px rgba(0, 0, 0, 0.48),
+    inset 0 0 36px rgba(255, 44, 32, 0.08);
+}
+
+.curtainRight .curtainInner {
+  transform: scaleX(-1);
+}
+
+.curtainInner::before,
+.curtainInner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.curtainInner::before {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 18px),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0 2px, transparent 2px 18px);
+  mix-blend-mode: screen;
+  opacity: 0.34;
+}
+
+.curtainInner::after {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14), transparent 16%, transparent 84%, rgba(0, 0, 0, 0.42)),
+    radial-gradient(circle at 72% 50%, rgba(255, 66, 56, 0.24), transparent 24%);
+}
+
+.copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  gap: 0.95rem;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+.label,
+.subtitle {
+  margin: 0;
+  color: rgba(243, 240, 234, 0.72);
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.label {
+  font-size: 0.78rem;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4.6rem, 14vw, 10.6rem);
+  font-weight: 400;
+  line-height: 0.84;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  white-space: pre-line;
+  color: #fff0ec;
+  text-shadow:
+    0 0 22px rgba(255, 84, 62, 0.18),
+    0 0 64px rgba(255, 18, 18, 0.14);
+}
+
+.subtitle {
+  max-width: 36rem;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 900px) {
+  .root {
+    z-index: 34;
+  }
+
+  .frame {
+    inset: 14px;
+  }
+
+  .curtain {
+    width: 58%;
+  }
+
+  .copy {
+    gap: 0.8rem;
+    padding-inline: 1.2rem;
+  }
+
+  .title {
+    font-size: clamp(3.2rem, 18vw, 5.6rem);
+    line-height: 0.88;
+  }
+
+  .subtitle {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+  }
+}

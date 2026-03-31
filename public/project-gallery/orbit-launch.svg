@@ -1,0 +1,19 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#080405"/>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <circle cx="820" cy="460" r="230" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)" stroke-width="28"/>
+  <circle cx="820" cy="460" r="106" fill="rgba(255,255,255,0.1)"/>
+  <rect x="152" y="772" width="1296" height="248" rx="32" fill="rgba(12,8,10,0.86)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="184" y="286" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="126" font-weight="900">ORBIT</text>
+  <text x="186" y="358" fill="#E8DBD6" font-family="Arial, sans-serif" font-size="26" letter-spacing="5">IDENTITY / MOTION / RELEASE</text>
+  <text x="212" y="878" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="116" font-weight="900">LAUNCH</text>
+  <text x="212" y="948" fill="#E8DBD6" font-family="Arial, sans-serif" font-size="34">A central pulse mark, timing strips, and bright state color</text>
+  <text x="212" y="994" fill="#E8DBD6" font-family="Arial, sans-serif" font-size="34">turn a simple drop page into a more theatrical release frame.</text>
+  <defs>
+    <linearGradient id="bg" x1="162" y1="76" x2="1454" y2="1084" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#240A0A"/>
+      <stop offset="0.5" stop-color="#100708"/>
+      <stop offset="1" stop-color="#5B0808"/>
+    </linearGradient>
+  </defs>
+</svg>

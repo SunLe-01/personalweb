@@ -1,0 +1,20 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#060606"/>
+  <g opacity="0.95">
+    <rect x="82" y="82" width="88" height="836" fill="#FF2A2A"/>
+    <rect x="182" y="82" width="88" height="836" fill="#D41616"/>
+    <rect x="282" y="82" width="88" height="836" fill="#B20E0E"/>
+    <rect x="382" y="82" width="88" height="836" fill="#950909"/>
+  </g>
+  <rect x="490" y="156" width="940" height="688" rx="28" fill="url(#bg)"/>
+  <path d="M560 270H1360" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
+  <path d="M560 368H1280" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
+  <path d="M560 466H1320" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
+  <text x="560" y="760" fill="#F5F1EB" font-size="40" font-family="Arial">TRANSITION FRAME</text>
+  <defs>
+    <linearGradient id="bg" x1="520" y1="156" x2="1380" y2="844" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121212"/>
+      <stop offset="1" stop-color="#2B0000"/>
+    </linearGradient>
+  </defs>
+</svg>

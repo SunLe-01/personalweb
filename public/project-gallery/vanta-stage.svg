@@ -1,0 +1,29 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#090304"/>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect x="90" y="120" width="150" height="860" rx="18" fill="url(#bar)"/>
+  <rect x="250" y="120" width="1210" height="170" rx="28" fill="rgba(255,255,255,0.04)"/>
+  <rect x="250" y="360" width="1100" height="560" rx="34" fill="rgba(18,12,14,0.82)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="92" y="288" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="124" font-weight="900">VANTA</text>
+  <text x="312" y="490" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="146" font-weight="900">SIGNAL</text>
+  <text x="312" y="590" fill="#E7D8D2" font-family="Arial, sans-serif" font-size="28" letter-spacing="5">CAMPAIGN / MOTION / LANDING</text>
+  <text x="312" y="700" fill="#E7D8D2" font-family="Arial, sans-serif" font-size="34">Timed reveals, countdown blocks, and oversized type</text>
+  <text x="312" y="756" fill="#E7D8D2" font-family="Arial, sans-serif" font-size="34">organize a release page around a single strong cue.</text>
+  <g opacity="0.72">
+    <rect x="312" y="820" width="202" height="56" rx="28" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+    <rect x="536" y="820" width="184" height="56" rx="28" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="344" y="857" fill="#F5EFEA" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">TIMED REVEALS</text>
+    <text x="575" y="857" fill="#F5EFEA" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">MONUMENTAL</text>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="160" y1="40" x2="1460" y2="1110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A0909"/>
+      <stop offset="0.42" stop-color="#130708"/>
+      <stop offset="1" stop-color="#540000"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="165" y1="120" x2="165" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4242"/>
+      <stop offset="1" stop-color="#7C1212"/>
+    </linearGradient>
+  </defs>
+</svg>

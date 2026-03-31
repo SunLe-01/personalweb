@@ -1,0 +1,440 @@
+.wrapper {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  --pointer-from-center: 0;
+  --pointer-from-top: 0.5;
+  --pointer-from-left: 0.5;
+  --card-opacity: 0;
+  --rotate-x: 0deg;
+  --rotate-y: 0deg;
+  --background-x: 50%;
+  --background-y: 50%;
+  --preview-background: linear-gradient(160deg, #090909 0%, #141414 100%);
+  --preview-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.01));
+  --behind-glow-color: rgba(255, 50, 50, 0.4);
+  --behind-glow-size: 58%;
+  --inner-gradient: linear-gradient(145deg, rgba(28, 24, 30, 0.76) 0%, rgba(94, 12, 12, 0.16) 54%, rgba(255, 255, 255, 0.04) 100%);
+  --preview-aspect-ratio: 4 / 5;
+  --preview-copy-width: min(24rem, 82%);
+  position: relative;
+  width: min(100%, 30rem);
+  perspective: 600px;
+  transform: translate3d(0, 0, 0.1px);
+}
+
+.wrapper.isInteractive {
+  cursor: pointer;
+}
+
+.wrapper.isInteractive:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.72);
+  outline-offset: 6px;
+}
+
+.behind {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--pointer-x) var(--pointer-y),
+    var(--behind-glow-color) 0%,
+    transparent var(--behind-glow-size)
+  );
+  filter: blur(54px) saturate(1.12);
+  opacity: calc(0.84 * var(--card-opacity));
+  transition: opacity 200ms ease;
+}
+
+.wrapper.isActive {
+  --card-opacity: 1;
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--preview-aspect-ratio, 4 / 5);
+  overflow: hidden;
+  border-radius: 32px;
+  background: rgba(5, 5, 5, 0.94);
+  box-shadow:
+    rgba(0, 0, 0, 0.78) calc((var(--pointer-from-left) * 12px) - 4px) calc((var(--pointer-from-top) * 22px) - 7px) 30px -6px,
+    0 28px 92px rgba(0, 0, 0, 0.38);
+  transition: transform 1s ease, box-shadow 0.32s ease;
+  transform: translateZ(0) rotateX(0deg) rotateY(0deg);
+  backface-visibility: hidden;
+  isolation: isolate;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 7;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.76) 100%);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.shell.isActive .card {
+  transition: none;
+  transform: translateZ(0) rotateX(var(--rotate-y)) rotateY(var(--rotate-x));
+}
+
+.shell.isEntering .card {
+  transition: transform 180ms ease-out, box-shadow 180ms ease-out;
+}
+
+.inside {
+  position: absolute;
+  inset: 0;
+  background-image: var(--inner-gradient);
+  background-color: rgba(4, 4, 4, 0.88);
+}
+
+.base {
+  position: absolute;
+  inset: 0;
+  background-image: var(--preview-surface), var(--preview-background);
+  opacity: 0.98;
+  z-index: 0;
+}
+
+.base::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.24));
+}
+
+.shine,
+.shine::after {
+  --space: 4.5%;
+  --angle: -45deg;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transform: translate3d(0, 0, 1px);
+  z-index: 2;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 132, 132, 0.55) calc(var(--space) * 1),
+      rgba(255, 210, 160, 0.5) calc(var(--space) * 2),
+      rgba(255, 255, 255, 0.2) calc(var(--space) * 3),
+      rgba(255, 120, 120, 0.42) calc(var(--space) * 4),
+      rgba(255, 70, 70, 0.4) calc(var(--space) * 5),
+      rgba(255, 160, 160, 0.5) calc(var(--space) * 6),
+      rgba(255, 132, 132, 0.55) calc(var(--space) * 7)
+    ),
+    repeating-linear-gradient(
+      var(--angle),
+      rgba(10, 10, 16, 0.9) 0%,
+      rgba(232, 232, 232, 0.22) 3.8%,
+      rgba(255, 110, 110, 0.18) 4.5%,
+      rgba(232, 232, 232, 0.18) 5.2%,
+      rgba(10, 10, 16, 0.9) 10%,
+      rgba(10, 10, 16, 0.92) 12%
+    ),
+    radial-gradient(
+      farthest-corner circle at var(--pointer-x) var(--pointer-y),
+      rgba(255, 255, 255, 0.18) 10%,
+      rgba(255, 110, 110, 0.06) 28%,
+      rgba(0, 0, 0, 0.28) 120%
+    );
+  background-position:
+    0 var(--background-y),
+    var(--background-x) var(--background-y),
+    center;
+  background-size:
+    500% 500%,
+    300% 300%,
+    200% 200%;
+  background-repeat: repeat;
+  background-blend-mode: screen, hard-light, normal;
+}
+
+.shine {
+  opacity: calc(0.32 + (var(--card-opacity) * 0.16));
+  mix-blend-mode: screen;
+  animation: holo-bg 18s linear infinite;
+  transition: opacity 220ms ease, filter 0.8s ease;
+}
+
+.shine::before,
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.shine::before {
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 170, 170, 0.34),
+      rgba(255, 92, 92, 0.34),
+      rgba(255, 255, 255, 0.22)
+    ),
+    radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.02) 90%);
+  background-size:
+    240% 240%,
+    100% 100%;
+  background-position:
+    var(--pointer-x) var(--pointer-y),
+    center;
+  background-blend-mode: screen;
+  filter: brightness(calc(1.5 - (var(--pointer-from-center) * 0.25))) contrast(calc(1.7 + var(--pointer-from-center)))
+    saturate(calc(0.8 + var(--pointer-from-center)));
+  mix-blend-mode: screen;
+}
+
+.shine::after {
+  background-position:
+    0 var(--background-y),
+    calc(var(--background-x) * 0.4) calc(var(--background-y) * 0.5),
+    center;
+  background-size:
+    180% 280%,
+    620% 620%,
+    100% 100%;
+  mix-blend-mode: difference;
+  filter: brightness(0.72) contrast(1.42);
+}
+
+.shell.isActive .shine {
+  filter: brightness(0.94) contrast(1.56) saturate(0.62);
+  animation-play-state: paused;
+}
+
+.shell.isActive .shine::before,
+.shell.isActive .shine::after {
+  opacity: 1;
+}
+
+.glare {
+  position: absolute;
+  inset: 0;
+  transform: translate3d(0, 0, 1.1px);
+  overflow: hidden;
+  background-image: radial-gradient(
+    farthest-corner circle at var(--pointer-x) var(--pointer-y),
+    rgba(255, 255, 255, 0.48) 0%,
+    rgba(255, 72, 72, 0.22) 14%,
+    rgba(18, 18, 18, 0.74) 86%
+  );
+  mix-blend-mode: overlay;
+  filter: brightness(0.88) contrast(1.18);
+  opacity: calc(0.18 + (var(--card-opacity) * 0.36));
+  z-index: 3;
+}
+
+.mediaLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.imageFrame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.card[data-layout="window"] .imageFrame {
+  inset: clamp(14px, 1.8vw, 24px) clamp(18px, 2.2vw, 30px) clamp(102px, 14vh, 132px) clamp(48px, 6vw, 72px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+}
+
+.card[data-layout="window"][data-copy-align="end"] .imageFrame {
+  inset: clamp(14px, 1.8vw, 24px) clamp(48px, 6vw, 72px) clamp(102px, 14vh, 132px) clamp(18px, 2.2vw, 30px);
+}
+
+.imageFrame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.28));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.image {
+  transform: translate3d(
+      calc((var(--pointer-from-left) - 0.5) * -18px),
+      calc((var(--pointer-from-top) - 0.5) * -16px),
+      0
+    )
+    scale(calc(var(--project-image-scale, 1) + 0.02));
+  transform-origin: center center;
+  transition: transform 140ms ease-out, filter 0.35s ease;
+  filter: brightness(0.84) saturate(1.05) contrast(1.08);
+}
+
+.metaRow {
+  position: absolute;
+  top: clamp(18px, 2.1vw, 24px);
+  left: clamp(18px, 2.1vw, 24px);
+  right: clamp(18px, 2.1vw, 24px);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  color: rgba(243, 240, 234, 0.68);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  z-index: 5;
+  transform: translate3d(
+    calc((var(--pointer-from-left) - 0.5) * -8px),
+    calc((var(--pointer-from-top) - 0.5) * -6px),
+    16px
+  );
+}
+
+.copy {
+  position: absolute;
+  left: clamp(16px, 2.1vw, 24px);
+  right: clamp(16px, 2.1vw, 24px);
+  bottom: clamp(16px, 2.1vw, 24px);
+  display: grid;
+  align-content: end;
+  gap: 0.9rem;
+  max-width: var(--preview-copy-width);
+  padding: 1.25rem 1.2rem 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 12, 0.24), rgba(10, 10, 12, 0.8));
+  backdrop-filter: blur(24px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+  z-index: 5;
+  transform: translate3d(
+    calc((var(--pointer-from-left) - 0.5) * -12px),
+    calc((var(--pointer-from-top) - 0.5) * -10px),
+    18px
+  );
+}
+
+.card[data-copy-align="end"] .copy {
+  margin-left: auto;
+}
+
+.eyebrow {
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  color: rgba(243, 240, 234, 0.62);
+  text-transform: uppercase;
+}
+
+.copy h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.7rem, 5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.copy p {
+  margin: 0;
+  max-width: 24rem;
+  color: rgba(243, 240, 234, 0.84);
+  line-height: 1.6;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.34rem 0.58rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@keyframes holo-bg {
+  0% {
+    background-position:
+      0 var(--background-y),
+      0 0,
+      center;
+  }
+
+  100% {
+    background-position:
+      0 var(--background-y),
+      90% 90%,
+      center;
+  }
+}
+
+@media (hover: hover) {
+  .wrapper:hover {
+    --card-opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .card {
+    min-height: 22rem;
+  }
+
+  .card[data-layout="window"] .imageFrame,
+  .card[data-layout="window"][data-copy-align="end"] .imageFrame {
+    inset: 0 0 8.8rem;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .copy {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  .metaRow {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+}

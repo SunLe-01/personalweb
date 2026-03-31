@@ -1,0 +1,19 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#0A0908"/>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect x="120" y="120" width="560" height="936" rx="34" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="740" y="120" width="738" height="420" rx="34" fill="rgba(255,255,255,0.05)"/>
+  <rect x="740" y="590" width="738" height="466" rx="34" fill="rgba(14,11,10,0.86)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="174" y="384" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="122" font-weight="900">MIRAGE</text>
+  <text x="174" y="454" fill="#E8DBD6" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">EDITORIAL / BRAND / STORY</text>
+  <text x="786" y="718" fill="#F5EFEA" font-family="Arial Black, Impact, sans-serif" font-size="104" font-weight="900">NOTES</text>
+  <text x="786" y="794" fill="#E8DBD6" font-family="Arial, sans-serif" font-size="34">A long reading window, softer glare, and calmer spacing</text>
+  <text x="786" y="842" fill="#E8DBD6" font-family="Arial, sans-serif" font-size="34">support dense product story without flattening the page.</text>
+  <defs>
+    <linearGradient id="bg" x1="88" y1="76" x2="1508" y2="1102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20110F"/>
+      <stop offset="0.52" stop-color="#111010"/>
+      <stop offset="1" stop-color="#65300C"/>
+    </linearGradient>
+  </defs>
+</svg>

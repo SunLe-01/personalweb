@@ -1,0 +1,9 @@
+.root {
+  display: block;
+}
+
+.char {
+  display: inline-block;
+  will-change: contents, transform;
+  text-align: center;
+}

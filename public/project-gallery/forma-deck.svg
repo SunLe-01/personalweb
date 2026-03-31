@@ -1,0 +1,15 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#050505"/>
+  <rect x="84" y="84" width="1432" height="832" rx="28" fill="#111111"/>
+  <rect x="162" y="164" width="1276" height="672" rx="24" fill="url(#bg)"/>
+  <rect x="220" y="230" width="360" height="372" rx="20" fill="rgba(255,255,255,0.08)"/>
+  <rect x="640" y="230" width="520" height="120" rx="20" fill="#FF2A2A"/>
+  <rect x="640" y="392" width="640" height="210" rx="20" fill="rgba(255,255,255,0.06)"/>
+  <text x="220" y="736" fill="#F5F1EB" font-size="40" font-family="Arial">PRESENTATION DECK</text>
+  <defs>
+    <linearGradient id="bg" x1="162" y1="164" x2="1438" y2="836" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#191919"/>
+      <stop offset="1" stop-color="#600000"/>
+    </linearGradient>
+  </defs>
+</svg>
