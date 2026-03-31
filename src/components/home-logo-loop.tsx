@@ -16,56 +16,58 @@ import { LogoLoop, type LogoLoopItem } from "@/components/logo-loop";
 
 type HomeLogoBadgeProps = {
   icon: IconType;
+  label: string;
 };
 
-function HomeLogoBadge({ icon: Icon }: HomeLogoBadgeProps) {
+function HomeLogoBadge({ icon: Icon, label }: HomeLogoBadgeProps) {
   return (
     <span className="home-logo-badge">
       <span className="home-logo-badge__mark">
         <Icon />
       </span>
+      <span className="home-logo-badge__label">{label}</span>
     </span>
   );
 }
 
 const homeTechLogos: LogoLoopItem[] = [
   {
-    node: <HomeLogoBadge icon={SiNextdotjs} />,
+    node: <HomeLogoBadge icon={SiNextdotjs} label="Next.js" />,
     title: "Next.js",
     href: "https://nextjs.org"
   },
   {
-    node: <HomeLogoBadge icon={SiReact} />,
+    node: <HomeLogoBadge icon={SiReact} label="React" />,
     title: "React",
     href: "https://react.dev"
   },
   {
-    node: <HomeLogoBadge icon={SiTypescript} />,
+    node: <HomeLogoBadge icon={SiTypescript} label="TypeScript" />,
     title: "TypeScript",
     href: "https://www.typescriptlang.org"
   },
   {
-    node: <HomeLogoBadge icon={SiJavascript} />,
+    node: <HomeLogoBadge icon={SiJavascript} label="JavaScript" />,
     title: "JavaScript",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
   {
-    node: <HomeLogoBadge icon={SiGreensock} />,
+    node: <HomeLogoBadge icon={SiGreensock} label="GSAP" />,
     title: "GSAP",
     href: "https://gsap.com"
   },
   {
-    node: <HomeLogoBadge icon={SiThreedotjs} />,
+    node: <HomeLogoBadge icon={SiThreedotjs} label="Three.js" />,
     title: "Three.js",
     href: "https://threejs.org"
   },
   {
-    node: <HomeLogoBadge icon={SiGithub} />,
+    node: <HomeLogoBadge icon={SiGithub} label="GitHub" />,
     title: "GitHub",
     href: "https://github.com/SunLe-01"
   },
   {
-    node: <HomeLogoBadge icon={SiVercel} />,
+    node: <HomeLogoBadge icon={SiVercel} label="Vercel" />,
     title: "Vercel",
     href: "https://vercel.com"
   }
@@ -78,7 +80,7 @@ export function HomeLogoLoop() {
       speed={64}
       direction="left"
       logoHeight={36}
-      gap={28}
+      gap={18}
       hoverSpeed={18}
       scaleOnHover
       fadeOut
