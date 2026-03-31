@@ -15,6 +15,7 @@ import {
 import { DeviceNoticeLayer } from "@/components/device-notice-layer";
 import { HomeHeroStage } from "@/components/home-hero-stage";
 import { HomeIntroOverlay } from "@/components/home-intro-overlay";
+import { HomeLogoLoop } from "@/components/home-logo-loop";
 import { ProjectsPanel } from "@/components/projects-panel";
 import { RedSquareLayer } from "@/components/red-square-layer";
 import { useRouteTransition } from "@/components/route-transition-provider";
@@ -335,6 +336,10 @@ export function PortfolioShell() {
                   toFontVariationSettings="'wght' 980, 'opsz' 56"
                 />
               </h1>
+            </div>
+
+            <div data-reveal className="home-shell__logo-loop">
+              <HomeLogoLoop />
             </div>
           </div>
         </section>
